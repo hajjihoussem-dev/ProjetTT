@@ -7,29 +7,12 @@ import test.technique.Projet.Repository.ContactRepository;
 
 import java.util.List;
 
-@Service
-public class ContactService{
-    @Autowired
-    private ContactRepository contactRepository;
 
-    public List<Contact> getAllContacts() {
-        return (List<Contact>) contactRepository.findAll();
-    }
-
-    public Contact getContactById(Long id) {
-        return contactRepository.findById(id).orElse(null);
-    }
-
-    public void addContact(Contact contact) {
-        contactRepository.save(contact);
-    }
-
-    public void updateContact(Contact contact) {
-        contactRepository.save(contact);
-    }
-
-    public void deleteContact(Long id) {
-        contactRepository.deleteById(id);
-    }
+public interface ContactService{
+    List<Contact> retrieveAllContact();
+    Contact addContact(Contact contact);
+    void deleteContact(String id);
+    Contact  retrieveContactById(String id);
+    Contact updateContact(Contact contact);
 
 }

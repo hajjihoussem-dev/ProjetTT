@@ -15,29 +15,34 @@ public class ContactController {
 
     @GetMapping
     public List<Contact> getAllContacts() {
-        return contactService.getAllContacts();
+        return contactService.retrieveAllContact();
     }
 
-    @GetMapping("/{id}")
-    public Contact getContact(@PathVariable Long id) {
-        return contactService.getContactById(id);
+
+    @GetMapping("/retrieveContact/{contactId}")
+    @ResponseBody
+    public Contact retrieveContactById(@PathVariable("contactId") String contactId){
+        return contactService.retrieveContactById(contactId);
     }
 
-    @PostMapping
-    public void addContact(@RequestBody Contact contact) {
+    @PostMapping("/addContact")
+    @ResponseBody
+    public Contact addContact(@RequestBody Contact contact)
+    {
         contactService.addContact(contact);
+        return contact;
     }
 
-    @PutMapping("/{id}")
-    public void updateContact(@PathVariable Long id, @RequestBody Contact contact) {
-        if (contactService.getContactById(id) != null) {
-            contact.setId(id);
-            contactService.updateContact(contact);
-        }
+    @PutMapping("/updateContact")
+    @ResponseBody
+    public Contact updateContact(@RequestBody Contact contact){
+        return contactService.updateContact(contact);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteContact(@PathVariable Long id) {
-        contactService.deleteContact(id);
+    @DeleteMapping("/deleteContact/{contactId}")
+    @ResponseBody
+    public void deleteMessage(@PathVariable("contactId") String contactId){
+        contactService.deleteContact(contactId);
     }
+
 }

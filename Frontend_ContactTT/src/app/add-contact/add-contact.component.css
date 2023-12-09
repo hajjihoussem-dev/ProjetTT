@@ -1,0 +1,48 @@
+.ng-invalid:not(form).ng-touched{
+  border:1px solid red;
+}
+.background-container {
+  background-image: url('src/assets/images/image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 638px;
+  width: 1020px;
+  color: #5e5b5b;
+  padding: 35px;
+  background-color: transparent;
+}
+
+input,textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1;
+  color: #fff;
+
+}
+input:invalid,
+textarea:invalid {
+  border: 1px solid red;
+}
+.move-up-button {
+  position: relative;
+  top: -15px; /* Ajustez la valeur selon votre besoin */
+}

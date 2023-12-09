@@ -1,0 +1,80 @@
+<h2>Add Contact</h2>
+<form (submit)="addContact()" class="form-horizontal">
+  <div class="background-container">
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label text-black">
+      <label for="firstName">First Name : </label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+      <div class="form-group">
+      <div class="form-line">
+      <input name="firstName" [(ngModel)]="con.firstName" type="text" id="firstName" class="form-control" placeholder="Enter your first name" required #firstNameField="ngModel">
+    </div>
+      </div>
+      </div>
+      </div>
+ <div class="row clearfix ">
+  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+  <label for="lastName">Last Name : </label>
+  </div>
+  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+  <div class="form-group">
+  <div class="form-line">
+  <input name="lastName" [(ngModel)]="con.lastName" type="text" id="lastName" class="form-control" placeholder="Enter your last name" required #lastNameField="ngModel" width="100px">
+</div>
+  </div>
+  </div>
+  </div>
+  <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="age">Age : </label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="age" [(ngModel)]="con.age" type="text" id="age" class="form-control" placeholder="Enter your age" required #ageField="ngModel">
+  </div>
+    </div>
+    </div>
+    </div>
+  <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="email">E-mail :</label>
+      </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="email" [(ngModel)]="con.email" type="text" id="email" class="form-control" placeholder="Enter your e-mail" required #emailField="ngModel">
+  </div>
+    </div>
+    </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+      <label for="phone">Phone : </label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+      <div class="form-group">
+      <div class="form-line">
+      <input name="phone" [(ngModel)]="con.phone" type="text" id="phone" class="form-control" placeholder="Enter your phone" required #phoneField="ngModel">
+
+    </div>
+      </div>
+      </div>
+      </div>
+      <div class="row clearfix">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="description">Description : </label>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+        <div class="form-line">
+        <input name="description" [(ngModel)]="con.description" type="text" id="description" class="form-control" placeholder="Enter your description" required #descriptionField="ngModel">
+      </div>
+        </div>
+        </div>
+        </div>
+
+  <button type="button" class="move-up-button">Add Contact</button>
+</div>
+</form>

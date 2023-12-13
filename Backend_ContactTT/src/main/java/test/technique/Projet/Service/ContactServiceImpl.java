@@ -15,7 +15,7 @@ public class ContactServiceImpl implements ContactService{
     ContactRepository contactRepository;
     private static final Logger l = LogManager.getLogger(ContactServiceImpl.class);
     @Override
-    public List<Contact> retrieveAllContact(){
+    public List<Contact> getAllContact(){
         List<Contact> contacts=(List<Contact>) contactRepository.findAll();
         for(Contact contact : contacts){
             l.info("contact +++ :" + contact);

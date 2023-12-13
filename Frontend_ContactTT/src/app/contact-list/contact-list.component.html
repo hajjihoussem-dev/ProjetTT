@@ -1,9 +1,19 @@
 <h2>Contact List</h2>
-<ul>
+<form class="d-flex" role="search">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button (click)="search()">Search</button>
+  <div *ngFor="let contact of filteredContacts">
+    {{ contact.firstName }} {{ contact.lastName }}
+  </div>
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+<td>
+        <ul>
   <li *ngFor="let contact of contacts">
-    {{ contact.firstName }} {{ contact.lastName }} - {{ contact.email }} - {{ contact.phone }}
+    {{ contact.firstName }} {{ contact.lastName }} {{ contact.phone }}
     <a [routerLink]="['/update-contact', contact.id]">Edit</a>
-    <!--<button (click)="deleteContact(contact.id)">Delete</button>-->
+    <button (click)="deleteContact(contact.id)"class="btn btn-danger">Delete</button>
   </li>
-</ul>
+</ul></td>
 <a routerLink="/add-contact">Add Contact</a>
+<!--</form>-->
+<!--{{ contact.email }}-->

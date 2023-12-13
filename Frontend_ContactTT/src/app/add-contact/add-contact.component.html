@@ -1,5 +1,4 @@
-<h2>Add Contact</h2>
-<form (submit)="addContact()" class="form-horizontal">
+<!-- <form (submit)="addContact()" class="form-horizontal img">
   <div class="background-container">
     <div class="row clearfix">
       <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label text-black">
@@ -27,24 +26,24 @@
   </div>
   <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-    <label for="age">Age : </label>
+    <label for="description">Description : </label>
     </div>
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="age" [(ngModel)]="con.age" type="text" id="age" class="form-control" placeholder="Enter your age" required #ageField="ngModel">
+    <input name="description" [(ngModel)]="con.description" type="text" id="description" class="form-control" placeholder="Enter your description" required #descriptionField="ngModel">
   </div>
     </div>
     </div>
     </div>
   <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-    <label for="email">E-mail :</label>
-      </div>
+    <label for="age">Age : </label>
+    </div>
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="email" [(ngModel)]="con.email" type="text" id="email" class="form-control" placeholder="Enter your e-mail" required #emailField="ngModel">
+    <input name="age" [(ngModel)]="con.age" type="text" id="age" class="form-control" placeholder="Enter your age" required #ageField="ngModel">
   </div>
     </div>
     </div>
@@ -62,19 +61,133 @@
       </div>
       </div>
       </div>
-      <div class="row clearfix">
-        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-        <label for="description">Description : </label>
-        </div>
-        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-        <div class="form-group">
-        <div class="form-line">
-        <input name="description" [(ngModel)]="con.description" type="text" id="description" class="form-control" placeholder="Enter your description" required #descriptionField="ngModel">
-      </div>
-        </div>
-        </div>
-        </div>
+
 
   <button type="button" class="move-up-button">Add Contact</button>
 </div>
 </form>
+
+ -->
+ <div class="container">
+
+  <form (submit)="addContact()" class="well form-horizontal" action=" " method="post"  id="contact_form" >
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us Today!</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label">First Name</label>
+<div class="col-md-4 inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label" >Last Name</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label">Age</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input name="age" placeholder="Age" class="form-control"  type="text">
+      </div>
+    </div>
+    </div>
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label">Phone </label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone" placeholder="(+216)12 345 678" class="form-control" type="text">
+  </div>
+</div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+  </div>
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label">Address</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+<input name="address" placeholder="Address" class="form-control" type="text">
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label">City</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+<input name="city" placeholder="city" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+<!--
+  <div class="form-group">
+<label class="col-md-4 control-label">Zip Code</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+<input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+-->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Job</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="job" placeholder="Job" class="form-control"  type="text">
+    </div>
+  </div>
+  </div>
+
+<!-- Success message -->
+<div class="alert alert-success c1" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+<label class="col-md-4 control-label"></label>
+<div class="col-md-4">
+  <button type="submit" class="btn btn-warning" >Submit <span class="glyphicon glyphicon-send"></span></button>
+</div>
+</div>
+
+</fieldset>
+</form>
+</div>
+<!--  </div> /.container -->

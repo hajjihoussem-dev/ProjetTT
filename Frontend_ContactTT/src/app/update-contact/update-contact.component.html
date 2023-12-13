@@ -1,3 +1,126 @@
+<!--   <div class="body ">
+    <form class="form-horizontal container">
+    <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="name">First Name</label >
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="firstName" [(ngModel)]="contact.firstName" type="text" id="firstName" class="form-control" placeholder="Enter your first name" required #firstNameField="ngModel">
+ </div>
+    </div>
+    </div>
+    </div>
+    <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="name">Last Name</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="lastName" [(ngModel)]="contact.lastName" type="text" id="lastName" class="form-control" placeholder="Enter your last name" required #lastNameField="ngModel">
+ </div>
+    </div>
+    </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+      <label for="name">Age</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+      <div class="form-group">
+      <div class="form-line">
+      <input name="age" [(ngModel)]=" contact.age" type="text" id="zipCode" class="form-control" placeholder="Enter your age" required #ageField="ngModel">
+ </div>
+      </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+      <label for="name">Phone </label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+      <div class="form-group">
+      <div class="form-line">
+      <input name="phone" [(ngModel)]=" contact.phone" type="text" id="phone" class="form-control" placeholder="Enter your phone" required #phoneField="ngModel">
+   </div>
+      </div>
+      </div>
+    <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="name">Email</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="mail" [(ngModel)]=" contact.mail" type="text" id="mail" class="form-control" placeholder="Enter your email address" required #mailField="ngModel">
+ </div>
+    </div>
+    </div>
+  </div>
+  <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="name">Address</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="address" [(ngModel)]=" contact.address" type="text" id="address" class="form-control" placeholder="Enter your email address" required #addressField="ngModel">
+</div>
+    </div>
+    </div>
+  </div>
+  <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for=" name">City</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="city" [(ngModel)]=" contact.city" type="text" id="city" class="form-control" placeholder="city" required #cityField="ngModel">
+  </div>
+    </div>
+    </div>
+  </div>
+  /////
+<div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for="zipCode">ZipCode</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="zipCode" [(ngModel)]=" contact.zipCode" type="text" id="zipCode" class="form-control" placeholder="Enter your zipCode" required #zipCodeField="ngModel">
+    </div>
+    </div>
+    </div>
+  </div>
+//////
+
+  <div class="row clearfix">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+    <label for=" name">Job</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+    <div class="form-group">
+    <div class="form-line">
+    <input name="job" [(ngModel)]=" contact.job" type="text" id="job" class="form-control" placeholder="Enter your job" required #jobField="ngModel">
+   </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="row clearfix">
+  <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+  <button (click)="updateContact()" type="button"class="btn btn-primary m-t-15 waves-effect">Add</button>
+  </div>
+  </div>
+  </div>
+
+</form></div>
+
+ -->
 
   <!--<div style="width: 400px;">
     <form>
@@ -19,15 +142,34 @@
         <label for="name">password </label>
         <input type="text" class="form-control" id="Password" required="" [(ngModel)]="user.password" name="Password">
       </div>
-      <div class="form-group">
+      <div class="row clearfix">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="role">Role</label>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+        <div class="form-line">
+        <select class="form-control" name="role" id="role" [(ngModel)]="user.role">
+        <option value=""></option>
+        <option value="ADMINISTRATEUR">ADMINISTRATEUR</option>
+        <option value="INGENIEUR">INGENIEUR</option>
+        <option value="CHEF_DEPARTEMENT">CHEF_DEPARTEMENT</option>
+        <option value="TECHNICIEN">TECHNICIEN</option>
+        <option value="EMPLOYE">EMPLOYE</option>
+        </select>
+        </div>
+        </div>
+        </div>
+        </div>
+     <div class="form-group">
         <label for="name">Role </label>
         <input type="text" class="form-control" id="Role" required="" [(ngModel)]="user.Role" name="Role">
       </div>
        <button type="button" class="btn btn-primary">update</button>
     </form>
   </div>-->
-  <div class="body ">
-    <form class="form-horizontal container">
+  <div class="body">
+    <form class="form-horizontal">
     <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
     <label for="first_name">First Name</label >
@@ -62,32 +204,21 @@
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="email" [(ngModel)]=" contact.email" type="text" id="email_address_2" class="form-control" placeholder="Enter your email address" required #emailField="ngModel">
+    <input name="email" [(ngModel)]=" contact.mail" type="text" id="email_address_2" class="form-control" placeholder="Enter your email address" required #emailField="ngModel">
     <div [hidden]="emailField.valid || emailField.untouched" class="alert alert-danger">Enter your email</div>
   </div>
     </div>
     </div>
   </div>
-  <div class="row clearfix">
-  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-  <label for="password_2">Password</label>
-  </div>
-  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-  <div class="form-group">
-  <div class="form-line">
-  <input name="password" [(ngModel)]="contact.password" type="password" id="password_2" class="form-control" placeholder="Enter your password" required #passwordField="ngModel">
-  <div [hidden]="passwordField.valid || passwordField.untouched" class="alert alert-danger">Enter your password</div>
-  </div>
-  </div>
-  </div>
-  </div>
+
   <div class="row clearfix">
   <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-  <button (click)="updateUserById()" type="button"class="btn btn-primary m-t-15 waves-effect">Add</button>
+  <button (click)="updateContact()" type="button"class="btn btn-primary m-t-15 waves-effect">Add</button>
   </div>
   </div>
   </form>
   </div>
+
 
 
 

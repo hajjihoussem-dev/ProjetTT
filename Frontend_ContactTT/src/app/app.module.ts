@@ -6,14 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpdateContactComponent } from './update-contact/update-contact.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { DetailContactComponent } from './detail-contact/detail-contact.component';
-import { ContactService } from './contact.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { ContactService } from './contact.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],

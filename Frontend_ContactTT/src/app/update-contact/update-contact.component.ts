@@ -9,20 +9,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UpdateContactComponent implements OnInit {
   contact:any;
-  message:string | undefined;
-    constructor(private cs:ContactService, private route: ActivatedRoute,private router:Router ) { }
+  message?:string;
+    constructor(private cs:ContactService,private router:Router ) { }
 
     ngOnInit(): void {
- //  this.cs.getContactById(this.route.snapshot.paramMap.get("id")).subscribe(data => this.contact=data)
+      this.contact = this.cs.getContactById(this.contact);
+ //this.cs.getContactById(this.route.snapshot.paramMap.get('id')).subscribe(data => this.contact=data)
     }
-    updateUserById(): void {
+
+    updateContact(): void {
       console.table(this.contact);
-      this.cs.addContact(this.contact)
+      this.cs.updateContact(this.contact)
         .subscribe(  response => {
             console.log(response);
             this.message = 'The tutorial was updated successfully!';
             alert(this.message);
-            this.router.navigate(['/home/listcontact']);
+            this.router.navigate(['/home/list-contact']);
           },
           error => {
             console.log(error);

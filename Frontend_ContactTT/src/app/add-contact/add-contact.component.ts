@@ -13,16 +13,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddContactComponent  implements OnInit{
   con : Contact = new Contact();
   submitted = false;
-  monFormulaire!: FormGroup;
+  //monFormula!: FormGroup;
   constructor(private contactService:ContactService, private router:Router, private formBuilder: FormBuilder) { }
   ngOnInit(){
-    this.monFormulaire = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      age: ['', [Validators.required, Validators.min(18)]],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
-    });
   }
 
  newContact(): void {
@@ -41,17 +34,11 @@ save() {
   onSubmit() {
   this.submitted = true;
   this.save();
-  if (this.monFormulaire.valid) {
-    console.log('Formulaire soumis avec succès', this.monFormulaire.value);
-  } else {
-    console.log('Veuillez remplir tous les champs correctement.');
-  }
   }
 gotoList() {
   this.router.navigate(['/home/list-contact']);
   }
  addContact(){
-  this.contactService.addContact(this.con).subscribe(()=>this.router.navigateByUrl("/home/listcontact"));
-
+  this.contactService.addContact(this.con).subscribe(()=> this.router.navigateByUrl("/home/list-contact"));
 }
 }

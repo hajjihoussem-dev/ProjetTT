@@ -38,5 +38,4 @@ public class ContactServiceImpl implements ContactService{
         return contactRepository.save(contact);
     }
 
-
 }

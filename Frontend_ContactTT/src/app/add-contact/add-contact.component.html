@@ -70,7 +70,7 @@
  -->
  <div class="container">
 
-  <form (submit)="addContact()" class="well form-horizontal" action=" " method="post"  id="contact_form" >
+  <form class="well form-horizontal"(ngSubmit)="onSubmit()"  id="contact_form" >
 <fieldset>
 
 <!-- Form Name -->
@@ -83,7 +83,7 @@
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+<input type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="con.firstName" required>
   </div>
 </div>
 </div>
@@ -95,7 +95,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+<input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="con.lastName" required>
   </div>
 </div>
 </div>
@@ -104,8 +104,8 @@
     <label class="col-md-4 control-label">Age</label>
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-    <input name="age" placeholder="Age" class="form-control"  type="text">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <input type="text" id="age" name="age" class="form-control" [(ngModel)]="con.age" required>
       </div>
     </div>
     </div>
@@ -116,7 +116,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-<input name="phone" placeholder="(+216)12 345 678" class="form-control" type="text">
+<input type="text" id="phone" name="phone" placeholder="(+216)12 345 678" class="form-control" [(ngModel)]="con.phone" required>
   </div>
 </div>
 </div>
@@ -126,7 +126,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        <input type="text" id="mail" name="mail" class="form-control" [(ngModel)]="con.mail" required>
     </div>
   </div>
   </div>
@@ -137,7 +137,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-<input name="address" placeholder="Address" class="form-control" type="text">
+      <input type="text" id="address" name="address" class="form-control" [(ngModel)]="con.address" required>
   </div>
 </div>
 </div>
@@ -149,7 +149,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-<input name="city" placeholder="city" class="form-control"  type="text">
+      <input type="text" id="city" name="city" class="form-control" [(ngModel)]="con.city" required>
   </div>
 </div>
 </div>
@@ -159,7 +159,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-<input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+       <input type="text" id="age" name="age" class="form-control" [(ngModel)]="con.zipCode" required>
   </div>
 </div>
 </div>
@@ -170,8 +170,8 @@
   <label class="col-md-4 control-label">Job</label>
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="job" placeholder="Job" class="form-control"  type="text">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+        <input type="text" id="job" name="job" class="form-control" [(ngModel)]="con.job" required>
     </div>
   </div>
   </div>

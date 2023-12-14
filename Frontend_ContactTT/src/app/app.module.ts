@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { DetailContactComponent } from './detail-contact/detail-contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -26,7 +25,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     SidebarComponent,
     LoginComponent,
-    DetailContactComponent
   ],
   imports: [
     BrowserModule,

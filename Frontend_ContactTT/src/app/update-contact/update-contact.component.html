@@ -172,45 +172,41 @@
     <form class="form-horizontal">
     <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-    <label for="first_name">First Name</label >
+    <label for="name">First Name</label >
     </div>
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="first_name" [(ngModel)]="contact.firstName" type="text" id="first_name"
+    <input name="firstName" [(ngModel)]="contact.firstName" type="text" id="firstName"
     class="form-control" placeholder="Enter your first name" required #firstNameField="ngModel">
-    <div [hidden]="firstNameField.valid || firstNameField.untouched" class="alert alert-danger">Enter your first name</div>
-  </div>
+</div>
     </div>
     </div>
     </div>
     <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-    <label for="last_name">Last Name</label>
+    <label for="name">Last Name</label>
     </div>
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="last_name" [(ngModel)]="contact.lastName" type="text" id="last_name" class="form-control" placeholder="Enter your last name" required #lastNameField="ngModel">
-    <div [hidden]="lastNameField.valid || lastNameField.untouched" class="alert alert-danger">Enter your lastname</div>
-  </div>
+    <input name="lastName" [(ngModel)]="contact.lastName" type="text" id="lastName" class="form-control" placeholder="Enter your last name" required #lastNameField="ngModel">
+</div>
     </div>
     </div>
     </div>
     <div class="row clearfix">
     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-    <label for="email_address_2">Email</label>
+    <label for="name">Email</label>
     </div>
     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
     <div class="form-group">
     <div class="form-line">
-    <input name="email" [(ngModel)]=" contact.mail" type="text" id="email_address_2" class="form-control" placeholder="Enter your email address" required #emailField="ngModel">
-    <div [hidden]="emailField.valid || emailField.untouched" class="alert alert-danger">Enter your email</div>
+    <input name="mail" [(ngModel)]=" contact.mail" type="text" id="mail" class="form-control" placeholder="Enter your email address" required #emailField="ngModel">
   </div>
     </div>
     </div>
   </div>
-
   <div class="row clearfix">
   <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
   <button (click)="updateContact()" type="button"class="btn btn-primary m-t-15 waves-effect">Add</button>

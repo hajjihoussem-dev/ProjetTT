@@ -14,8 +14,9 @@ export class AddContactComponent  implements OnInit{
   con : Contact = new Contact();
   submitted = false;
   //monFormula!: FormGroup;
-  constructor(private contactService:ContactService, private router:Router, private formBuilder: FormBuilder) { }
+  constructor(private contactService:ContactService, private router:Router) { }
   ngOnInit(){
+    this.newContact();
   }
 
  newContact(): void {
@@ -25,8 +26,9 @@ export class AddContactComponent  implements OnInit{
 
 save() {
   this.contactService.addContact(this.con).subscribe(data => {
-     console.log(data)
-    this.con = new Contact();
+     console.log('Contact ajouté avec succès :',data)
+    //this.con = new Contact();
+    this.newContact();
     this.gotoList();},
     error => console.log(error));}
 

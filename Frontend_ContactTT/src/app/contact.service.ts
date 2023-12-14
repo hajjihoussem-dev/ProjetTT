@@ -22,22 +22,12 @@ export class ContactService {
   return this.http.post<Contact>("http://localhost:8081/contact/addContact", contact);
   }
 
- /*   updateContact(id:number) {
-    return this.http.put<Contact>("http://localhost:8081/contact/updateContact/" ,+id);
-  } */
   updateContact(contact: Contact): Observable<Contact> {
     return this.http.put<Contact>("http://localhost:8081/contact/updateContact", contact);
   }
-  getContactById(id: number){
-    return this.http.get("http://localhost:8081/contact/getContact" +id);
+  getContactById(id:number){
+    return this.http.get("http://localhost:8081/contact/getContact/" +id);
   }
-    /*
-
-    updateContact(contact: Contact): Observable<Contact> {
-      const url = `${this.apiUrl}/${contact.id}`;
-      return this.http.put<Contact>(url, contact);
-    }
-*/
     authenticate(username: string, password: string): Observable<boolean> {
       const isValid = this.validateCredentials(username, password);
 

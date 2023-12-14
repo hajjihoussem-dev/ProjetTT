@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { UpdateContactComponent } from './update-contact/update-contact.component';
+import { DetailContactComponent } from './detail-contact/detail-contact.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent}, //path login cad me charger le component login
@@ -17,6 +18,7 @@ const routes: Routes = [
 ] ,
 },
 {path:"update-contact/:id", component:UpdateContactComponent},
+{path: "contact-details/:id", component: DetailContactComponent},
 {path:"**", component: LoginComponent},
 ];
 

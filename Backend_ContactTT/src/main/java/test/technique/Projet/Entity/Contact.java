@@ -23,7 +23,6 @@ public class Contact implements Serializable {
     private String mail;
     private String address;
     private String city;
-   // private int zipCode;
     private String job;
 
     @Override

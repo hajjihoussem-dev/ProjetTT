@@ -7,18 +7,18 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { UpdateContactComponent } from './update-contact/update-contact.component';
-import { DetailContactComponent } from './detail-contact/detail-contact.component';
+
 
 const routes: Routes = [
   {path:"login", component:LoginComponent}, //path login cad me charger le component login
  {path:"", redirectTo:"/login", pathMatch:"full"},
   {path:"home", component: HomeComponent, children:[
   {path:"list-contact", component: ContactListComponent},
-  {path:"add-contact", component: AddContactComponent}
+  {path:"add-contact", component: AddContactComponent},
 ] ,
 },
 {path:"update-contact/:id", component:UpdateContactComponent},
-{path: "contact-details/:id", component: DetailContactComponent},
+//{path: "detail-contact/:id", component: DetailContactComponent},
 {path:"**", component: LoginComponent},
 ];
 

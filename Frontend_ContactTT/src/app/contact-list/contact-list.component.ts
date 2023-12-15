@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class ContactListComponent implements OnInit{
 
   contacts: Contact[] = [];
-  filteredContacts: Contact[] = [];
+  allContacts: Contact[] = [];
   searchTerm: string = '';
   constructor(private router:Router, private contactService: ContactService) {
     this.contactService.getContacts().subscribe(contacts => this.contacts = contacts);
@@ -34,37 +34,39 @@ export class ContactListComponent implements OnInit{
       });
   }
 
-/* search() {
-  // Filtrer les contacts en fonction du terme de recherche
-  this.filteredContacts = this.contacts.filter(contact =>
-    contact.firstName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-    contact.lastName.toLowerCase().includes(this.searchTerm.toLowerCase())
-  ); */
   loadContacts() {
     this.contactService.getContacts().subscribe(data => {
+      this.allContacts=data;
       this.contacts = data;
       this.applySearchFilter();
     });
   }
 
   applySearchFilter() {
-    // Filtrer les contacts en fonction du terme de recherche
-    this.filteredContacts = this.contacts.filter(contact =>
+    this.contacts = this.allContacts.filter(contact =>
       contact.firstName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
       contact.lastName.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
-
+  clearSearch() {
+    this.searchTerm = '';
+    this.applySearchFilter();
+  }
   deleteContact(id: number) {
-    this.contactService.deleteContact(id)
+    const confirmation = window.confirm('Are you sure you want to delete this contact?');
+if(confirmation){
+  this.contactService.deleteContact(id)
       .subscribe(() => {
         console.log('Contact deleted successfully');
         this.getContacts();
       }, error => {
         console.error('Error deleting contact', error);
       });
+}
+
   }
-  getContactById(contactId: number) {
-    this.router.navigate(['/contact-details', contactId]);
+  getContactById(id: number) {
+    this.router.navigate(['detail-contact', id]);
   }
+
 }

@@ -26,8 +26,8 @@ export class AddContactComponent  implements OnInit{
 
 save() {
   this.contactService.addContact(this.con).subscribe(data => {
-     console.log('Contact ajouté avec succès :',data)
-    //this.con = new Contact();
+     console.log('Contact added successfully :',data)
+
     this.newContact();
     this.gotoList();},
     error => console.log(error));}
